@@ -1,0 +1,15 @@
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    two = 0
+    three = 0
+    while n % 2 == 0:
+        two += 1
+        n //= 2
+    while n % 3 == 0:
+        three += 1
+        n //= 3
+    if n != 1 or two > three:
+        print(-1)
+    else:
+        print((three - two) + three)
